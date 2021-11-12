@@ -234,3 +234,41 @@ const stringReverser = (string) => {
 }
 stringReverser("helloworld");
 
+
+
+// Write a function that takes in a number. Return the sum of all the numbers from 1 to the number you 
+// passed in. For example, if we pass in 4, we'd return 1 + 2 + 3 + 4 = 10.
+const sumNum = (num) => {
+    // num is passed into function
+    console.log('in sumNum', num);
+    // declare variable for sum
+    let sum = 0;
+    // iterate up to num
+    for( let i=1; i<=num; i++) {
+        // add index value to sum
+        sum += i;
+    } // end loop
+    return sum, console.log(sum)
+}
+sumNum(5);
+sumNum(25);
+
+
+// Given a string, find the first consecutively repeating character in it and return it's index. If there 
+// are no repeating characters, return -1.
+const findFirstRepeat = (stringToCheck) => {
+    // string is passed into function
+    for (let i=0; i<stringToCheck.length; i++) {
+        // compare string character against next string character
+        if (stringToCheck[i] == stringToCheck[i+1]) {
+            // if equal, return index
+            return i + 1, console.log(i + 1);
+        } // end conditional
+    } // end loop
+    // return -1 if no repeats
+    return -1, console.log(-1);
+}
+findFirstRepeat('abccde');
+findFirstRepeat('1234567899');
+
+
