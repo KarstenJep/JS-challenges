@@ -1,7 +1,5 @@
 // Write a function that takes in an array of numbers and returns the sum of all 
 // the numbers in the array.
-array = [ 1, 3, 10]
-
 function findSum (array){
     // array is passed into function as parameter
     console.log('in findSum. array is:', array)
@@ -15,7 +13,7 @@ function findSum (array){
     return sum, console.log(sum);
 } // end function findSum
 // call function
-findSum(array);
+// findSum([ 1, 3, 10]);
 
 
 
@@ -36,7 +34,7 @@ const findSumOfPos = (array) => {
     } // end for loop
     return sum, console.log(sum);
 } // end function
-findSumOfPos([3, 2, 1]);
+// findSumOfPos([3, 2, 1]);
 
 
 
@@ -58,7 +56,7 @@ const returnOddArray = (array) => {
     // return new array
     return oddArray, console.log(oddArray);
 }
-returnOddArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+// returnOddArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 
 
@@ -81,9 +79,9 @@ const fizzBuzz = (number) => {
         return number, console.log(number);
     }
 }
-fizzBuzz(4);
-fizzBuzz(9);
-fizzBuzz(30);
+// fizzBuzz(4);
+// fizzBuzz(9);
+// fizzBuzz(30);
 
 
 
@@ -110,11 +108,11 @@ const leapYear = (year) => {
         return false, console.log(false);
     }
 }
-leapYear(2000);
-leapYear(2001);
-leapYear(2002);
-leapYear(2003);
-leapYear(2004);
+// leapYear(2000);
+// leapYear(2001);
+// leapYear(2002);
+// leapYear(2003);
+// leapYear(2004);
 
 
 
@@ -145,8 +143,8 @@ const blt = (array) => {
     } // end loop
     return breadOnEnds && bacon && tomato && lettuce, console.log(breadOnEnds, bacon, tomato, lettuce);
 }
-blt(['bread', 'lettuce', 'bacon', 'tomato', 'cheese', 'bread']);
-blt(['lettuce', 'bread', 'bacon', 'tomato', 'cheese', 'bread']);
+// blt(['bread', 'lettuce', 'bacon', 'tomato', 'cheese', 'bread']);
+// blt(['lettuce', 'bread', 'bacon', 'tomato', 'cheese', 'bread']);
 
 
 
@@ -175,8 +173,8 @@ const moveOddOrEven = (array, oddOrEven) => {
         return [...odds, ...evens], console.log( ...odds, ...evens);;
       } // end conditional
 }
-moveOddOrEven([1, 2, 3, 4, 5, 6], 'odd');
-moveOddOrEven([1, 2, 3, 4, 5, 6], 'even');
+// moveOddOrEven([1, 2, 3, 4, 5, 6], 'odd');
+// moveOddOrEven([1, 2, 3, 4, 5, 6], 'even');
 
 // alternate way to solve 
 // const moveOddOrEven = (array, oddOrEven) => {
@@ -220,7 +218,7 @@ const countString = (array, string) => {
     } // end loop
     return count, console.log(count);
 }
-countString(['yo', 'yoyo', 'yo', 'yao', 'y'], 'yo');
+// countString(['yo', 'yoyo', 'yo', 'yao', 'y'], 'yo');
 
 
 
@@ -232,7 +230,7 @@ const stringReverser = (string) => {
     } // end loop
     return reversedString, console.log(reversedString);
 }
-stringReverser("helloworld");
+// stringReverser("helloworld");
 
 
 
@@ -250,8 +248,8 @@ const sumNum = (num) => {
     } // end loop
     return sum, console.log(sum)
 }
-sumNum(5);
-sumNum(25);
+// sumNum(5);
+// sumNum(25);
 
 
 // Given a string, find the first consecutively repeating character in it and return it's index. If there 
@@ -268,7 +266,23 @@ const findFirstRepeat = (stringToCheck) => {
     // return -1 if no repeats
     return -1, console.log(-1);
 }
-findFirstRepeat('abccde');
-findFirstRepeat('1234567899');
+// findFirstRepeat('abccde');
+// findFirstRepeat('1234567899');
 
+// Given an array of 1s and 0s, find the maximum number of consecutive 1s in this array.
+const countConsecutiveOnes = arrayToCheck => {
+    let maxConsecutive = 0;
+    let currentStreak = 0;
+    for (let i = 0; i < arrayToCheck.length; i++) {
+        if (arrayToCheck[i] == 1 && maxConsecutive == currentStreak) {
+            maxConsecutive++;
+            currentStreak++;
+        } else if (arrayToCheck[i] == 1) {
+            currentStreak++;
+        } else {
+            currentStreak = 0;
+        }
+    }
+    return maxConsecutive;
+}
 
