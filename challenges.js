@@ -246,10 +246,11 @@ const sumNum = (num) => {
         // add index value to sum
         sum += i;
     } // end loop
-    return sum, console.log(sum)
+    return sum, console.log(sum);
 }
 // sumNum(5);
 // sumNum(25);
+
 
 
 // Given a string, find the first consecutively repeating character in it and return it's index. If there 
@@ -269,11 +270,18 @@ const findFirstRepeat = (stringToCheck) => {
 // findFirstRepeat('abccde');
 // findFirstRepeat('1234567899');
 
+
+
 // Given an array of 1s and 0s, find the maximum number of consecutive 1s in this array.
 const countConsecutiveOnes = arrayToCheck => {
+    // array is passed into function
+    console.log("in contConsecutiveOnes. array is:", arrayToCheck);
+    // declare variable to hold max consecutive, and track current consecutives
     let maxConsecutive = 0;
     let currentStreak = 0;
+    // loop thru array
     for (let i = 0; i < arrayToCheck.length; i++) {
+        // conditional to check index and increase variables
         if (arrayToCheck[i] == 1 && maxConsecutive == currentStreak) {
             maxConsecutive++;
             currentStreak++;
@@ -281,8 +289,9 @@ const countConsecutiveOnes = arrayToCheck => {
             currentStreak++;
         } else {
             currentStreak = 0;
-        }
-    }
+        } // end conditional
+    } // end loop
+    // return max consecutive variable
     return maxConsecutive;
 }
-
+// countConsecutiveOnes([1, 0, 0, 1, 1, 0, 1]);
